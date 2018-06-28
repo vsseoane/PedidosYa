@@ -1,0 +1,415 @@
+{
+	"id": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
+	"name": "PedidosYa",
+	"description": "",
+	"order": [
+		"3d065df8-8de3-0a2e-0619-5c576fab30ba",
+		"86ca5c8a-dfc6-1f50-0431-c10e50e56fbf",
+		"49567b54-9ead-7cc1-561c-9ab4779cafd8",
+		"e65139e9-07e3-03a1-c12c-d4ed4023543f",
+		"57c8a2c1-8f1e-1497-6eb7-4a6a869d7dab",
+		"bfa0ddbe-fe1a-2f89-615c-f5b3df1d2ff0",
+		"d91e08d0-6cc5-8836-fe25-f3d9e48f2b55",
+		"605f4d96-5967-a129-4e64-dd9b7ba9319a",
+		"87ef7ab7-1bb5-481a-ad81-3702d4480d14",
+		"6a97018a-4143-c99e-baaa-63f3558b5d00",
+		"7b645fec-ea76-4249-7d3d-876aa2b33f86"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1529972771321,
+	"owner": "2095672",
+	"public": false,
+	"requests": [
+		{
+			"id": "3d065df8-8de3-0a2e-0619-5c576fab30ba",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://stg-api.pedidosya.com/public/v1/tokens?clientId=test&clientSecret=PeY@@Tr1v1@943",
+			"queryParams": [
+				{
+					"key": "clientId",
+					"value": "test",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "clientSecret",
+					"value": "PeY@@Tr1v1@943",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Get Token API PedidosYA",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1529973402100,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\"index\": {\"_type\": \"evento\", \"_id\": 1, \"_index\": \"eventos\"}}\r\n{\"index\": 0, \"@timestamp\": \"2016-09-13T05:30:12.1212\", \"menssage_type\": \"error\", \"system\": \"Feed\", \"message\": \"In minim incididunt quis non eu Lorem culpa aliqua deserunt. In cillum qui commodo cillum sit sit ipsum. Amet culpa sit nostrud velit eiusmod ipsum anim commodo duis nulla proident laboris ut elit. Exercitation et commodo ex aute nulla pariatur dolore est Lorem Lorem. Dolore reprehenderit esse aute minim dolore velit nulla exercitation sunt eiusmod.\\r\\n\", \"id\": \"5b291546ac9a668f2b629c0a\"}\r\n{\"index\": {\"_type\": \"evento\", \"_id\": 2, \"_index\": \"eventos\"}}\r\n{\"index\": 0, \"@timestamp\": \"2016-09-13T05:30:12.1212\", \"menssage_type\": \"error\", \"system\": \"Feed\", \"message\": \"In minim incididunt quis non eu Lorem culpa aliqua deserunt. In cillum qui commodo cillum sit sit ipsum. Amet culpa sit nostrud velit eiusmod ipsum anim commodo duis nulla proident laboris ut elit. Exercitation et commodo ex aute nulla pariatur dolore est Lorem Lorem. Dolore reprehenderit esse aute minim dolore velit nulla exercitation sunt eiusmod.\\r\\n\", \"id\": \"5b291546ac9a668f2b629c0a\"}"
+		},
+		{
+			"id": "49567b54-9ead-7cc1-561c-9ab4779cafd8",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:57975/api/restaurant",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1530185591774,
+			"name": "Create Restaurant",
+			"description": "",
+			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
+			"responses": [],
+			"rawModeData": "{\n\t\"Name\": \"El club de la papafrita\",\n\t\"Description\": \"Un lugar con linda musica, comida rica\",\n\t\"OpeningHour\": \"8\",\n\t\"ClosingHour\": \"17\",\n\t\"Telephone\": \"091234567\",\n\t\"Latitude\": \"-34.905490\",\n\t\"Longitude\": \"-56.181319\",\n\t\"Categories\": [{\"id\":\"1\"},{\"id\":\"4\"}]\n\t\n}"
+		},
+		{
+			"id": "57c8a2c1-8f1e-1497-6eb7-4a6a869d7dab",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:57975/api/restaurant?idRestaurant=3",
+			"queryParams": [
+				{
+					"key": "idRestaurant",
+					"value": "3",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1530106115233,
+			"name": "Update Restaurant",
+			"description": "",
+			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
+			"responses": [],
+			"rawModeData": "{\n\t\"Name\": \"La taberna\",\n\t\"Description\": \"Cerca de la facultad de agronomia\",\n\t\"OpeningHour\": \"8\",\n\t\"ClosingHour\": \"13\",\n\t\"Telephone\": \"091234567\",\n\t\"Latitude\": \"-1,298347\",\n\t\"Longitude\": \"-1,65633\",\n\t\"Categories\": [{\"id\":\"1\"},{\"id\":\"3\"}]\n\t\n}"
+		},
+		{
+			"id": "605f4d96-5967-a129-4e64-dd9b7ba9319a",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:57975/api/restaurant?idRestaurant=1",
+			"queryParams": [
+				{
+					"key": "idRestaurant",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1530110739712,
+			"name": "Delete Restaurant",
+			"description": "",
+			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "6a97018a-4143-c99e-baaa-63f3558b5d00",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:57975/api/restaurant/Search/pata",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1530156069736,
+			"name": "Get Restaurants by Similar Name",
+			"description": "",
+			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
+			"responses": [],
+			"rawModeData": "{\n\t\"Name\": \"MonteCarlos2\",\n\t\"Description\": \"Es un lugar oscuro donde venden buena comida\",\n\t\"OpeningHour\": \"8\",\n\t\"ClosingHour\": \"12\",\n\t\"Telephone\": \"091234567\",\n\t\"Latitude\": \"-1,298347\",\n\t\"Longitude\": \"-1,65633\",\n\t\"Categories\": [{\"id\":\"1\"},{\"id\":\"3\"}]\n\t\n}"
+		},
+		{
+			"id": "7b645fec-ea76-4249-7d3d-876aa2b33f86",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:57975/api/restaurant/Competitor/8",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1530156095545,
+			"name": "Get Competitors Restaurants",
+			"description": "",
+			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
+			"responses": [],
+			"rawModeData": "{\n\t\"Name\": \"MonteCarlos2\",\n\t\"Description\": \"Es un lugar oscuro donde venden buena comida\",\n\t\"OpeningHour\": \"8\",\n\t\"ClosingHour\": \"12\",\n\t\"Telephone\": \"091234567\",\n\t\"Latitude\": \"-1,298347\",\n\t\"Longitude\": \"-1,65633\",\n\t\"Categories\": [{\"id\":\"1\"},{\"id\":\"3\"}]\n\t\n}"
+		},
+		{
+			"id": "86ca5c8a-dfc6-1f50-0431-c10e50e56fbf",
+			"headers": "Authorization: 498-280305-16279f0b-b183-4ffb-83ce-cfa3f1d873e1\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "498-280305-16279f0b-b183-4ffb-83ce-cfa3f1d873e1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://stg-api.pedidosya.com/public/v1/search/restaurants?country=1&point=-34.905490,-56.181319&max=3",
+			"queryParams": [
+				{
+					"key": "country",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "point",
+					"value": "-34.905490,-56.181319",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "max",
+					"value": "3",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1530155221656,
+			"name": "Get Restaurantes API PedidosYA",
+			"description": "",
+			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
+			"responses": [],
+			"rawModeData": "{\"index\": {\"_type\": \"evento\", \"_id\": 1, \"_index\": \"eventos\"}}\r\n{\"index\": 0, \"@timestamp\": \"2016-09-13T05:30:12.1212\", \"menssage_type\": \"error\", \"system\": \"Feed\", \"message\": \"In minim incididunt quis non eu Lorem culpa aliqua deserunt. In cillum qui commodo cillum sit sit ipsum. Amet culpa sit nostrud velit eiusmod ipsum anim commodo duis nulla proident laboris ut elit. Exercitation et commodo ex aute nulla pariatur dolore est Lorem Lorem. Dolore reprehenderit esse aute minim dolore velit nulla exercitation sunt eiusmod.\\r\\n\", \"id\": \"5b291546ac9a668f2b629c0a\"}\r\n{\"index\": {\"_type\": \"evento\", \"_id\": 2, \"_index\": \"eventos\"}}\r\n{\"index\": 0, \"@timestamp\": \"2016-09-13T05:30:12.1212\", \"menssage_type\": \"error\", \"system\": \"Feed\", \"message\": \"In minim incididunt quis non eu Lorem culpa aliqua deserunt. In cillum qui commodo cillum sit sit ipsum. Amet culpa sit nostrud velit eiusmod ipsum anim commodo duis nulla proident laboris ut elit. Exercitation et commodo ex aute nulla pariatur dolore est Lorem Lorem. Dolore reprehenderit esse aute minim dolore velit nulla exercitation sunt eiusmod.\\r\\n\", \"id\": \"5b291546ac9a668f2b629c0a\"}"
+		},
+		{
+			"id": "87ef7ab7-1bb5-481a-ad81-3702d4480d14",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:57975/api/restaurant/category/2",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1530111216115,
+			"name": "Get Restaurants by Category",
+			"description": "",
+			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
+			"responses": [],
+			"rawModeData": "{\n\t\"Name\": \"MonteCarlos2\",\n\t\"Description\": \"Es un lugar oscuro donde venden buena comida\",\n\t\"OpeningHour\": \"8\",\n\t\"ClosingHour\": \"12\",\n\t\"Telephone\": \"091234567\",\n\t\"Latitude\": \"-1,298347\",\n\t\"Longitude\": \"-1,65633\",\n\t\"Categories\": [{\"id\":\"1\"},{\"id\":\"3\"}]\n\t\n}"
+		},
+		{
+			"id": "bfa0ddbe-fe1a-2f89-615c-f5b3df1d2ff0",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:57975/api/restaurant?idRestaurant=1",
+			"queryParams": [
+				{
+					"key": "idRestaurant",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1530108030016,
+			"name": "Get Restaurant by ID",
+			"description": "",
+			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
+			"responses": [],
+			"rawModeData": "{\n\t\"Name\": \"MonteCarlos2\",\n\t\"Description\": \"Es un lugar oscuro donde venden buena comida\",\n\t\"OpeningHour\": \"8\",\n\t\"ClosingHour\": \"12\",\n\t\"Telephone\": \"091234567\",\n\t\"Latitude\": \"-1,298347\",\n\t\"Longitude\": \"-1,65633\",\n\t\"Categories\": [{\"id\":\"1\"},{\"id\":\"3\"}]\n\t\n}"
+		},
+		{
+			"id": "d91e08d0-6cc5-8836-fe25-f3d9e48f2b55",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:57975/api/restaurant",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1530108056352,
+			"name": "Get Restaurants",
+			"description": "",
+			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
+			"responses": [],
+			"rawModeData": "{\n\t\"Name\": \"MonteCarlos2\",\n\t\"Description\": \"Es un lugar oscuro donde venden buena comida\",\n\t\"OpeningHour\": \"8\",\n\t\"ClosingHour\": \"12\",\n\t\"Telephone\": \"091234567\",\n\t\"Latitude\": \"-1,298347\",\n\t\"Longitude\": \"-1,65633\",\n\t\"Categories\": [{\"id\":\"1\"},{\"id\":\"3\"}]\n\t\n}"
+		},
+		{
+			"id": "e65139e9-07e3-03a1-c12c-d4ed4023543f",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:57975/api/category",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1530155199868,
+			"name": "Create Category",
+			"description": "",
+			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
+			"responses": [],
+			"rawModeData": "{\n\t\"Name\": \"Chivitos\"\n}"
+		}
+	]
+}
