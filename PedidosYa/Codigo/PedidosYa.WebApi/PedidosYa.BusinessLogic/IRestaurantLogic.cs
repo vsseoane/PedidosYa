@@ -20,9 +20,6 @@ namespace PedidosYa.BusinessLogic
         bool IsRestaurantNameRepeat(string restaurantName);
         bool CategoriesAreCorrect(List<Category> categories);
         void CreateRestaurant(Restaurant aRestaurant);
-
-
-
-
+        bool IsRestaurantNameRepeat(string name, int iD);
     }
 }

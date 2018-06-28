@@ -40,7 +40,7 @@ namespace PedidosYa.Repository
             {
                 using (PersistentDbContext context = new PersistentDbContext())
                 {
-                    Restaurant restaurantAux =  this.GetWithFilter(x => x.Name == restaurantName && x.IsActive == true, null, "")
+                    Restaurant restaurantAux =  this.GetWithFilter(x => x.Name == restaurantName, null, "")
                     .FirstOrDefault<Restaurant>();
                     if (restaurantAux != null) {
                         existRestaurantName = true;
@@ -62,6 +62,7 @@ namespace PedidosYa.Repository
                 using (PersistentDbContext context = new PersistentDbContext())
                 {
                     restaurantModified.ID = idRestaurant;
+                    restaurantModified.IsActive = true;
                     context.Set<Restaurant>().Attach(restaurantModified);
                     context.Entry(restaurantModified).State = EntityState.Modified;                    
                     context.SaveChanges();
@@ -94,6 +95,29 @@ namespace PedidosYa.Repository
                 IEnumerable<Restaurant> restaurantsAux = this.GetWithFilter(x => x.IsActive == actived, null, "Categories");
                 IEnumerable<Restaurant> restaurantsWithThisCatgory = restaurantsAux.Where(c => c.Categories.Any(b => b.ID == categoryId)).ToList<Restaurant>();
                 return restaurantsWithThisCatgory;
+            }
+        }
+
+        public bool ExistsRestaurantName(string restaurantName, int idRestaurant)
+        {
+            bool existRestaurantName = false;
+            try
+            {
+                using (PersistentDbContext context = new PersistentDbContext())
+                {
+                    Restaurant restaurantAux = this.GetWithFilter(x => x.Name == restaurantName && x.ID != idRestaurant, null, "")
+                    .FirstOrDefault<Restaurant>();
+                    if (restaurantAux != null)
+                    {
+                        existRestaurantName = true;
+                    }
+
+                    return existRestaurantName;
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.ToString());
             }
         }
 

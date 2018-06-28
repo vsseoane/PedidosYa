@@ -143,12 +143,16 @@ namespace PedidosYa.WebApi.Controllers
                 {
                     return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.NotFound, "No se ha encontrado las categorias ingresadas en el request"));
                 }
-                if (restaurantLogic.IsRestaurantNameRepeat(restaurantModified.Name))
+                if (restaurantLogic.IsRestaurantNameRepeat(restaurantModified.Name, idRestaurant))
                 {
                     return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.Ambiguous, "No se puede crear un restaurante con un nombre ya existente"));
                 }
                 restaurantLogic.UpdateRestaurant(idRestaurant,restaurantModified);
                 return Ok();
+            }
+            catch (RestaurantNotFoundException e)
+            {
+                return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.NotFound, e.Message));
             }
             catch (Exception ex)
             {

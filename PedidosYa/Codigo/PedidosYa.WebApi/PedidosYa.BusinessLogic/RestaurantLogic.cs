@@ -85,7 +85,11 @@ namespace PedidosYa.BusinessLogic
             bool isRepeatRestaurantName = restaurantRepository.ExistsRestaurantName(restaurantName);
             return isRepeatRestaurantName;
         }
-
+        public bool IsRestaurantNameRepeat(string restaurantName, int idRestaurant)
+        {
+            bool isRepeatRestaurantName = restaurantRepository.ExistsRestaurantName(restaurantName, idRestaurant);
+            return isRepeatRestaurantName;
+        }
         public List<RestaurantCompetitionFromApi> GetCompetitors(int idRestaurant)
         {
             Restaurant restaurant = this.GetRestaurantByIdWithCategories(idRestaurant);
@@ -105,7 +109,7 @@ namespace PedidosYa.BusinessLogic
             Restaurant restaurant = this.GetRestaurantByIdWithCategories(idRestaurant);
             List<RestaurantCompetitionFromApi> restaurantsFromApisToReturn = new List<RestaurantCompetitionFromApi>();
             bool finish = false;
-            for (int i= 0; !finish && i < restaurantsFromApis.Count; i++) {
+            for (int i= 0; !finish && restaurantsFromApis!= null && i < restaurantsFromApis.Count; i++) {
                 RestaurantCompetitionFromApi restaurantCompetitor = restaurantsFromApis[i];
                 if (HasAnyCategories(restaurant.Categories, restaurantCompetitor.categories)) {
                     restaurantsFromApisToReturn.Add(restaurantCompetitor);
@@ -160,7 +164,9 @@ namespace PedidosYa.BusinessLogic
         private string GetTokenFromAPI()
         {          
             string URL = "http://stg-api.pedidosya.com/public/v1/tokens";
-            string urlParameters = "?clientId=test&clientSecret=PeY@@Tr1v1@943";
+            string user = ConfigurationManager.AppSettings["userToGetToken"].ToString(); 
+            string password = ConfigurationManager.AppSettings["passwordToGetToken"].ToString(); 
+            string urlParameters = "?clientId=" + user +"&clientSecret=" + password ;
             string token = CallApiToGetToken(URL, urlParameters);
             return token;
 
@@ -183,14 +189,13 @@ namespace PedidosYa.BusinessLogic
       
 
         public void UpdateRestaurant(int idRestaurant, Restaurant restaurantModified) {
-            try
+
+            Restaurant restaurantToDelete = this.GetRestaurantById(idRestaurant);
+            if (restaurantToDelete == null)
             {
-                restaurantRepository.ModifyInDataBase(idRestaurant, restaurantModified);
+                throw new RestaurantNotFoundException("Restaurant con id '" + idRestaurant + "' no encontrado.");
             }
-            catch (Exception e)
-            {
-                throw new Exception(e.ToString());
-            }
+            restaurantRepository.ModifyInDataBase(idRestaurant, restaurantModified);
         }
 
         public void DeleteRestaurant(int id)
