@@ -5,11 +5,11 @@
 	"order": [
 		"3d065df8-8de3-0a2e-0619-5c576fab30ba",
 		"86ca5c8a-dfc6-1f50-0431-c10e50e56fbf",
-		"49567b54-9ead-7cc1-561c-9ab4779cafd8",
 		"e65139e9-07e3-03a1-c12c-d4ed4023543f",
 		"57c8a2c1-8f1e-1497-6eb7-4a6a869d7dab",
 		"bfa0ddbe-fe1a-2f89-615c-f5b3df1d2ff0",
 		"d91e08d0-6cc5-8836-fe25-f3d9e48f2b55",
+		"49567b54-9ead-7cc1-561c-9ab4779cafd8",
 		"605f4d96-5967-a129-4e64-dd9b7ba9319a",
 		"87ef7ab7-1bb5-481a-ad81-3702d4480d14",
 		"6a97018a-4143-c99e-baaa-63f3558b5d00",
@@ -78,7 +78,7 @@
 					"enabled": true
 				}
 			],
-			"url": "http://localhost:57975/api/restaurant",
+			"url": "{{ip}}:{{port}}/api/restaurant",
 			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
@@ -90,12 +90,12 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1530185591774,
+			"time": 1530187034612,
 			"name": "Create Restaurant",
 			"description": "",
 			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
 			"responses": [],
-			"rawModeData": "{\n\t\"Name\": \"El club de la papafrita\",\n\t\"Description\": \"Un lugar con linda musica, comida rica\",\n\t\"OpeningHour\": \"8\",\n\t\"ClosingHour\": \"17\",\n\t\"Telephone\": \"091234567\",\n\t\"Latitude\": \"-34.905490\",\n\t\"Longitude\": \"-56.181319\",\n\t\"Categories\": [{\"id\":\"1\"},{\"id\":\"4\"}]\n\t\n}"
+			"rawModeData": "{\n\t\"Name\": \"El club de la papafrita\",\n\t\"Description\": \"Un lugar con linda musica, comida rica\",\n\t\"OpeningHour\": \"8\",\n\t\"ClosingHour\": \"17\",\n\t\"Telephone\": \"091234567\",\n\t\"Latitude\": \"-34.905490\",\n\t\"Longitude\": \"-56.181319\",\n\t\"Categories\": [{\"id\":\"1\"},{\"id\":\"2\"}]\n\t\n}"
 		},
 		{
 			"id": "57c8a2c1-8f1e-1497-6eb7-4a6a869d7dab",
@@ -108,11 +108,11 @@
 					"enabled": true
 				}
 			],
-			"url": "http://localhost:57975/api/restaurant?idRestaurant=3",
+			"url": "{{ip}}:{{port}}/api/restaurant?idRestaurant=1",
 			"queryParams": [
 				{
 					"key": "idRestaurant",
-					"value": "3",
+					"value": "1",
 					"equals": true,
 					"description": "",
 					"enabled": true
@@ -128,12 +128,12 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1530106115233,
+			"time": 1530187967437,
 			"name": "Update Restaurant",
 			"description": "",
 			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
 			"responses": [],
-			"rawModeData": "{\n\t\"Name\": \"La taberna\",\n\t\"Description\": \"Cerca de la facultad de agronomia\",\n\t\"OpeningHour\": \"8\",\n\t\"ClosingHour\": \"13\",\n\t\"Telephone\": \"091234567\",\n\t\"Latitude\": \"-1,298347\",\n\t\"Longitude\": \"-1,65633\",\n\t\"Categories\": [{\"id\":\"1\"},{\"id\":\"3\"}]\n\t\n}"
+			"rawModeData": "{\n\t\"Name\": \"La taberna\",\n\t\"Description\": \"Cerca de la facultad de agronomia\",\n\t\"OpeningHour\": \"8\",\n\t\"ClosingHour\": \"13\",\n\t\"Telephone\": \"091234567\",\n\t\"Latitude\": \"-34.905490\",\n\t\"Longitude\": \"-56.181319\",\n\t\"Categories\": [{\"id\":\"1\"},{\"id\":\"2\"}]\n\t\n}"
 		},
 		{
 			"id": "605f4d96-5967-a129-4e64-dd9b7ba9319a",
@@ -146,11 +146,11 @@
 					"enabled": true
 				}
 			],
-			"url": "http://localhost:57975/api/restaurant?idRestaurant=1",
+			"url": "{{ip}}:{{port}}/api/restaurant?idRestaurant=2",
 			"queryParams": [
 				{
 					"key": "idRestaurant",
-					"value": "1",
+					"value": "2",
 					"equals": true,
 					"description": "",
 					"enabled": true
@@ -166,7 +166,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1530110739712,
+			"time": 1530187915296,
 			"name": "Delete Restaurant",
 			"description": "",
 			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
@@ -184,7 +184,7 @@
 					"enabled": true
 				}
 			],
-			"url": "http://localhost:57975/api/restaurant/Search/pata",
+			"url": "{{ip}}:{{port}}/api/restaurant/Search/pap",
 			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
@@ -196,7 +196,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1530156069736,
+			"time": 1530187964264,
 			"name": "Get Restaurants by Similar Name",
 			"description": "",
 			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
@@ -214,7 +214,7 @@
 					"enabled": true
 				}
 			],
-			"url": "http://localhost:57975/api/restaurant/Competitor/8",
+			"url": "{{ip}}:{{port}}/api/restaurant/Competitor/1",
 			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
@@ -226,7 +226,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1530156095545,
+			"time": 1530187957415,
 			"name": "Get Competitors Restaurants",
 			"description": "",
 			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
@@ -295,7 +295,7 @@
 					"enabled": true
 				}
 			],
-			"url": "http://localhost:57975/api/restaurant/category/2",
+			"url": "{{ip}}:{{port}}/api/restaurant/category/2",
 			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
@@ -307,7 +307,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1530111216115,
+			"time": 1530186375853,
 			"name": "Get Restaurants by Category",
 			"description": "",
 			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
@@ -325,7 +325,7 @@
 					"enabled": true
 				}
 			],
-			"url": "http://localhost:57975/api/restaurant?idRestaurant=1",
+			"url": "{{ip}}:{{port}}/api/restaurant?idRestaurant=1",
 			"queryParams": [
 				{
 					"key": "idRestaurant",
@@ -345,7 +345,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1530108030016,
+			"time": 1530187012824,
 			"name": "Get Restaurant by ID",
 			"description": "",
 			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
@@ -363,7 +363,7 @@
 					"enabled": true
 				}
 			],
-			"url": "http://localhost:57975/api/restaurant",
+			"url": "{{ip}}:{{port}}/api/restaurant",
 			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
@@ -375,7 +375,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1530108056352,
+			"time": 1530186381168,
 			"name": "Get Restaurants",
 			"description": "",
 			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
@@ -393,7 +393,7 @@
 					"enabled": true
 				}
 			],
-			"url": "http://localhost:57975/api/category",
+			"url": "{{ip}}:{{port}}/api/category",
 			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
@@ -404,7 +404,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1530155199868,
+			"time": 1530186979417,
 			"name": "Create Category",
 			"description": "",
 			"collectionId": "7a6294d5-2ae4-3c34-6944-46bbbfc3f336",
